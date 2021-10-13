@@ -101,7 +101,26 @@
          }
         }
         function agregarPlatillo(){
+         $nombre=$_POST['nombre'];
+         $precio=$_POST['precio'];
+         $cara=$_POST['cara'];
+         if($cara==null){
+            $cara=" ";
+         }
+         //Crea un objeto con los valores a insertar
+        $plato=['nombre'=>$nombre,'precio'=>$precio,'cara'=>$cara];
+         //Si los datos no estan duplicados o erroneos, abre la pagina inicial
+       if($this->model->insertarplato($plato))
+       {
+        echo "Nuevo platillo registrado ";
+        require_once 'views/menu_establecimiento.php';
 
+       }else
+       {
+        $this->view->mensaje = "Error dato duplicado o revise la informacion capturada";
+        $this->view->render('menu_establecimiento');  
+           
+       }
         }
 
    }

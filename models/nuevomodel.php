@@ -39,6 +39,25 @@ class NuevoModel extends Model{
             return false;
         }
     }
+    public function insertarplato($datos){
+        require_once("./views/islogin.php");
+
+        try{
+            //Realiza la conexión con la base de datos y usa sentencias de insercion en tabla platillos
+            $query=$this->db->connect()->prepare('INSERT INTO platillos (NOMBRE, PRECIO, CARACTERISTICAS,ID_ESTABLECIMIENTO) 
+            VALUES (:nombre, :precio, :caracteristicas, :id_establecimiento)');
+            //Asigna los parametros segun el dato en el arreglo recibido, realiza la insercion con execute    
+            if($query->execute(['nombre'=>$datos['nombre'],'precio'=>$datos['precio'], 'caracteristicas'=>$datos['cara'], 'id_establecimiento'=>$idusuario])){
+            
+                return true;
+            }else{
+                return false;
+            }
+        }catch(PDOException $e){ $this->view->mensaje = "Ya existe el platillo";
+            $this->view->render('menu_establecimiento');  
+            return false;
+        }
+    }
 
 
     

@@ -5,7 +5,7 @@
        function __construct() 
        {
            parent::__construct();
-           $this->view->render('menú_Establecimiento');
+           $this->view->render('menu_establecimiento');
        }
 
    }

@@ -13,6 +13,7 @@
     <ul>
       <li>
    <!-- REGRESA A PAGINA ANTERIOR-->
+
     <a href="javascript: history.go(-1)">
      <img src="<?php echo constant('URL');?>public/IMG/flecha2.png" width="50px"/>   </a></li>
   

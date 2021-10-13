@@ -1,13 +1,16 @@
 <?php
+
 include_once("./libs/database.php");
 include_once("./models/nuevomodel.php");
 include_once("./libs/model.php");
 $this->db=new Database();
 $db = $this->db->connect();
 error_reporting(0);
-session_start();
-$idusuario=$_SESSION['id_establecimiento'];
 
+require_once("islogin.php");
+if($estado){
+}else{
+}
 $query= $db->prepare("SELECT * FROM establecimiento WHERE id_establecimiento='$idusuario'");
 $query->execute();
 
@@ -48,32 +51,31 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
         <button class="redondo" id="uno">
         MENU</button></a></li>
         <li></li>
-        <li ><a href="<?php echo constant('URL');?>menu_Establecimiento" id="barra">
+        <li ><a href="<?php echo constant('URL');?>ofertas" id="barra">
         <button class="redondo" id="dos">
         OFERTAS</button></a></li>
         <li></li>
-        <li ><a href="<?php echo constant('URL');?>menu_Establecimiento" id="barra">
+        <li ><a href="<?php echo constant('URL');?>redes_sociales" id="barra">
         <button class="redondo" id="tres">
         REDES SOCIALES</button></a></li>
         <li></li>
-        <li ><a href="<?php echo constant('URL');?>menu_Establecimiento" id="barra">
+        <li ><a href="<?php echo constant('URL');?>mesas" id="barra">
         <button class="redondo" id="cuatro">
         MESAS DISPONIBLES</button></a></li>
         <li></li>
-        <li ><a href="<?php echo constant('URL');?>menu_Establecimiento" id="barra">
+        <li ><a href="<?php echo constant('URL');?>lista_pedidos" id="barra">
         <button class="redondo" id="cinco">
         LISTA DE PEDIDOS</button></a></li>
         <li></li>
-        <li ><a href="<?php echo constant('URL');?>menu_Establecimiento" id="barra">
+        <li ><a href="<?php echo constant('URL');?>mapa" id="barra">
         <button class="redondo" id="seis">
           MAPA</button></a></li>
         <li></li>
-        <li ><a href="<?php echo constant('URL');?>menu_Establecimiento" id="barra">
+        <li ><a href="<?php echo constant('URL');?>cerrar" id="barra">
         <button class="redondo" id="siete">CERRAR SESION</button></a></li>
         
     </ul>
 </article>
-
       <article id="datos">
     <h3 id="food">DATOS DEL ESTABLECIMIENTO</h3>
     <img  id="imglogo" src="<?php echo constant('URL');?>public/IMG/empresa.png" alt="descripción" />
