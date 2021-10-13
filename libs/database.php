@@ -3,7 +3,6 @@ class Database{
 
     function connect(){
         try{
-            PARA HEROKU
             //Asigna LOCALHOST
             //Le continua el puerto con PORT
             //Finalmente se especifica el nombre de la base de datos
