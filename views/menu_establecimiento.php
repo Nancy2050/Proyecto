@@ -20,7 +20,7 @@
 
     <!--Los datos del formulario son enviados a ingresar.php ahi se usan para almacenarlos en la base de datos-->
     <form action="<?php echo constant('URL');?>nuevo/agregarPlatillo" method="post" id="login" class="login">
-    <h3  id="titulo">MENÚ</h3>
+    <h3  id="titulo">PLATILLOS</h3>
 
     <div class="form-group">
 			<label>Nombre:</label>

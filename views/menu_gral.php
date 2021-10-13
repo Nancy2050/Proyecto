@@ -42,4 +42,7 @@
    
 </tbody>
 </table>
+<a href="<?php echo constant('URL');?>menu_establecimiento" id="barra">
+        <button class="redondo" id="dos">
+        AÑADIR PLATILLO</button></a>
 </html>

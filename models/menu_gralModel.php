@@ -14,7 +14,6 @@ include_once 'models/platillo.php';
             
             session_start();
             $plato=$_SESSION['id_establecimiento'];
-            echo "holaaaa";
             $query=$this->db->connect()->query("SELECT * FROM platillos WHERE id_establecimiento='$plato'");
             while($row=$query->fetch((PDO::FETCH_ASSOC))){
                 $item=new platillo();
