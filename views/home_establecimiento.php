@@ -6,11 +6,8 @@ include_once("./libs/model.php");
 $this->db=new Database();
 $db = $this->db->connect();
 error_reporting(0);
-
-require_once("islogin.php");
-if($estado){
-}else{
-}
+session_start();
+$idusuario=$_SESSION['id_establecimiento'];
 $query= $db->prepare("SELECT * FROM establecimiento WHERE id_establecimiento='$idusuario'");
 $query->execute();
 
@@ -47,7 +44,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
    </div>
 <article id="tabla">
       <ul id="menu">
-        <li ><a href="<?php echo constant('URL');?>menu_Establecimiento" id="barra">
+        <li ><a href="<?php echo constant('URL');?>menu_gral" id="barra">
         <button class="redondo" id="uno">
         MENU</button></a></li>
         <li></li>

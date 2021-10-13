@@ -47,7 +47,8 @@ class NuevoModel extends Model{
             $query=$this->db->connect()->prepare('INSERT INTO platillos (NOMBRE, PRECIO, CARACTERISTICAS,ID_ESTABLECIMIENTO) 
             VALUES (:nombre, :precio, :caracteristicas, :id_establecimiento)');
             //Asigna los parametros segun el dato en el arreglo recibido, realiza la insercion con execute    
-            if($query->execute(['nombre'=>$datos['nombre'],'precio'=>$datos['precio'], 'caracteristicas'=>$datos['cara'], 'id_establecimiento'=>$idusuario])){
+            if($query->execute(['nombre'=>$datos['nombre'],'precio'=>$datos['precio'], 'caracteristicas'=>$datos['cara'], 
+            'id_establecimiento'=>$idusuario])){
             
                 return true;
             }else{

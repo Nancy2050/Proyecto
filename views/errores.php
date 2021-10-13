@@ -7,7 +7,7 @@
     </head>
     <body>
     <?php require 'views/header.php';?>
-    <img  id="e" src="<?php echo constant('URL');?>public/IMG/error.png" alt="descripción" />
+    <img  id="e" src="<?php echo constant('URL');?>public/IMG/error2.png" alt="descripción" />
 
         <div  id="error" class="error">
             <h1 class="error"><?php echo $this->mensaje; ?></h1>

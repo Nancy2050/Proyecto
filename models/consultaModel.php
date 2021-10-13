@@ -1,5 +1,7 @@
 <?php
 include_once 'models/establecimiento.php';
+include_once 'models/platillo.php';
+
    class ConsultaModel extends Model
    {
 
@@ -7,8 +9,8 @@ include_once 'models/establecimiento.php';
        {
            parent::__construct();
        }
-       public function get($telefono){
-
+       public function get(){
+      
        }
    }
 
