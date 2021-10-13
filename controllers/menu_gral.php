@@ -38,17 +38,17 @@
 
         if($this->model->update(['nombre' => $nombre, 'caracteristicas' => $caracteristicas,
          'precio' => $precio,'id_platillos'=> $id_platillos] )){
-            // actualizar alumno exito
+            // actualizar platillo exito
             $platillo = new Platillo();
             $platillo->nombre = $nombre;
             $platillo->caracteristicas = $caracteristicas;
             $platillo->precio = $precio;
             
             $this->view->platillo = $platillo;
-            echo "Alumno actualizado correctamente";
+            echo "Platillo actualizado correctamente";
         }else{
             // mensaje de error
-            echo "No se pudo actualizar el alumno";
+            echo "No se pudo actualizar el platillo";
         }
         $this->view->render('detallePlato_establecimiento');
     }
