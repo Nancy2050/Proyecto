@@ -20,37 +20,43 @@
         $id_platillos = $param[0];
         $platillo = $this->model->getById($id_platillos);
         
-        session_start();
-        $_SESSION['id_verPlatillo'] = $platillo->id_platillos;
-        
         $this->view->platillo = $platillo;
         $this->view->mensaje = "";
         $this->view->render('detallePlato_establecimiento');
     }
        function actualizarPlatillo(){
-        session_start();
-        $id_platillos    = $_SESSION['id_verPlatillo'];
+        $id_platillos=$_POST['id_platillos'];
         $nombre=$_POST['nombre'];
         $caracteristicas  = $_POST['caracteristicas'];
         $precio=$_POST['precio'];
 
-        unset($_SESSION['id_verPlatillo']);
-
         if($this->model->update(['nombre' => $nombre, 'caracteristicas' => $caracteristicas,
          'precio' => $precio,'id_platillos'=> $id_platillos] )){
-            // actualizar alumno exito
             $platillo = new Platillo();
             $platillo->nombre = $nombre;
             $platillo->caracteristicas = $caracteristicas;
             $platillo->precio = $precio;
             
             $this->view->platillo = $platillo;
-            echo "Alumno actualizado correctamente";
+          // echo "Platillo actualizado correctamente";
         }else{
             // mensaje de error
-            echo "No se pudo actualizar el alumno";
+          //  echo "No se pudo actualizar el platillo";
         }
-        $this->view->render('detallePlato_establecimiento');
+        $this->view->render('home_establecimiento');
+    }
+    function eliminarPlatillo($param=null){
+        $id_platillos=$param[0];
+        
+        if($this->model->delete($id_platillos)){
+
+         //   $mensaje = 'Platillo eliminado';
+            $this->view->render('home_establecimiento');
+
+        }else{
+            $mensaje = 'No se pudo eliminar el platillo';
+        }     
+        echo $mensaje;
     }
    }
 

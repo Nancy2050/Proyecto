@@ -21,6 +21,7 @@ include_once 'models/platillo.php';
                 $item->precio=$row['precio'];
                 $item->caracteristicas=$row['caracteristicas'];
                 $item->id_establecimiento=$row['id_establecimiento'];
+                $item->id_platillos=$row['id_platillos'];
                 
                 array_push($items,$item);
             }
@@ -30,24 +31,26 @@ include_once 'models/platillo.php';
         }
        }
        public function getById($id){
-        $item = new Platillo();
+        $items=[];
 
-        $query = $this->db->connect()->prepare("SELECT * FROM platillos WHERE id_establecimiento = :id_establecimiento");
         try{
-            $query->execute(['id_platillos' => $id]);
-
-            while($row = $query->fetch()){
-                $item->id_platillos = $row['id_platillos'];
-                $item->nombre = $row['nombre'];
-                $item->caracteristicas = $row['caracteristicas'];
-                $item->precio = $row['precio'];
-
+            
+            $query=$this->db->connect()->query("SELECT * FROM platillos WHERE id_platillos='$id'");
+            while($row=$query->fetch((PDO::FETCH_ASSOC))){
+                $item=new platillo();
+                $item->nombre=$row['nombre'];
+                $item->precio=$row['precio'];
+                $item->caracteristicas=$row['caracteristicas'];
+                $item->id_establecimiento=$row['id_establecimiento'];
+                $item->id_platillos=$row['id_platillos'];
+                
+                array_push($items,$item);
             }
-
-            return $item;
+            return $items;
         }catch(PDOException $e){
-            return null;
+            return[];
         }
+
        }
        public function update($item){
         $query = $this->db->connect()->prepare("UPDATE platillos SET nombre = :nombre, caracteristicas = :caracteristicas, precio = :precio WHERE id_platillos = :id_platillos");
@@ -64,7 +67,14 @@ include_once 'models/platillo.php';
         }
        }
        public function delete($id){
+        try{
+            $query = $this->db->connect()->query("DELETE FROM platillos WHERE id_platillos = :'$id'");
 
+          //  $query->execute(['id_platillos'=> $id ]);
+            return true;
+        }catch(PDOException $e){
+            return false;
+        }
        }
    }
 

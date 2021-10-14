@@ -29,15 +29,18 @@
     foreach ($this->platillo as $row){
         $platillo=new Platillo();
         $platillo=$row;
+        
         ?>
     <tr id="filas">
         <td><?php echo $platillo->nombre;?></td>
         <td><?php echo $platillo->precio;?></td>
         <td><?php echo $platillo->caracteristicas;?></td>
+
         <td><a href="<?php echo constant('URL').'menu_gral/verPlatillo/'.$platillo->id_platillos?> ">Modificar</td>
         <td><a href="<?php echo constant('URL').'menu_gral/eliminarPlatillo/'.$platillo->id_platillos?> ">Eliminar</td>
         <td><a href="<?php echo constant('URL').'menu_gral/ofertarPlatillo/'.$platillo->id_platillos?> ">Ofertar</td>
-   <?php }?>
+        
+        <?php }?>
     </tr>
    
 </tbody>

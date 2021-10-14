@@ -113,12 +113,13 @@
        if($this->model->insertarplato($plato))
        {
         echo "Nuevo platillo registrado ";
-        require_once 'views/menu_establecimiento.php';
+       // <a href="javascript: history.go(-1)">
+       $this->view->render('menu_establecimiento');  
 
-       }else
+      }else
        {
         $this->view->mensaje = "Error dato duplicado o revise la informacion capturada";
-        $this->view->render('menu_establecimiento');  
+        $this->view->render('menu_gral');  
            
        }
         }
