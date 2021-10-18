@@ -23,24 +23,7 @@
     <th colspan="3">Editar</th>
 </tr>
 </thead>
-<tbody>
-    <?php    
-    include_once 'models/platillo.php';
-    foreach ($this->platillo as $row){
-        $platillo=new Platillo();
-        $platillo=$row;
-        ?>
-    <tr id="filas">
-        <td><?php echo $platillo->nombre;?></td>
-        <td><?php echo $platillo->precio;?></td>
-        <td><?php echo $platillo->caracteristicas;?></td>
-        <td><a href="<?php echo constant('URL').'menu_gral/verPlatillo/'.$platillo->id_platillos?> ">Modificar</td>
-        <td><a href="<?php echo constant('URL').'menu_gral/eliminarPlatillo/'.$platillo->id_platillos?> ">Eliminar</td>
-        <td><a href="<?php echo constant('URL').'menu_gral/ofertarPlatillo/'.$platillo->id_platillos?> ">Ofertar</td>
-   <?php }?>
-    </tr>
-   
-</tbody>
+
 </table>
 <a href="<?php echo constant('URL');?>menu_establecimiento" id="barra">
         <button class="redondo" id="dos">
