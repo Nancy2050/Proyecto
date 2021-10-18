@@ -5,11 +5,11 @@
        function __construct() 
        {
            parent::__construct();
-           
-           $this->view->platillo=[];
+            $this->view->render('menu_gral');
+         /*  $this->view->platillo=[];
            $platillo=$this->model->get();
         $this->view->platillo=$platillo;           
-        $this->view->render('menu_gral');
+        $this->view->render('menu_gral');*/
        }
 
     function verPlatillo($param = null){
