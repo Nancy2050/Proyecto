@@ -7,14 +7,10 @@
            parent::__construct();
            
            $this->view->platillo=[];
-       }
-       function render(){
-           
-        $platillo=$this->model->get();
+           $platillo=$this->model->get();
         $this->view->platillo=$platillo;           
         $this->view->render('menu_gral');
        }
-       
 
     function verPlatillo($param = null){
         $id_platillos = $param[0];
