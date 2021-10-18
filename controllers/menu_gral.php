@@ -6,10 +6,12 @@
        {
            parent::__construct();
             $this->view->render('menu_gral');
-         /*  $this->view->platillo=[];
-           $platillo=$this->model->get();
+       }
+      function render(){
+           
+        $platillo=$this->model->get();
         $this->view->platillo=$platillo;           
-        $this->view->render('menu_gral');*/
+        $this->view->render('menu_gral');
        }
 
     function verPlatillo($param = null){
