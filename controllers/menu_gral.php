@@ -5,6 +5,9 @@
        function __construct() 
        {
            parent::__construct();
+               
+        $platillo=$this->model->get();
+        $this->view->platillo=$platillo;  
             $this->view->render('menu_gral');
        }
       function render(){
