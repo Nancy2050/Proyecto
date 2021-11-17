@@ -13,7 +13,7 @@
 </head>
 <body id="inicial" >
 <?php require 'views/header.php';?>
-<img  id="i" src="<?php echo constant('URL');?>public/IMG/icono.png" alt="descripción" />
+<img  id="i" src="<?php echo constant('URL');?>public/IMG/login.svg" alt="descripción" />
  
     <!--Usa el formulario en validarCliente.php para comprobar existencia-->
     <form action="<?php echo constant('URL');?>nuevo/sesion2" method="post" id="login" class="login">
@@ -21,11 +21,11 @@
     <img  id="imglogo" src="<?php echo constant('URL');?>public/IMG/perfil.png" alt="descripción" />
     <div class="form-group">
 			<label>Telefono:</label>
-			<input type="tel" class="form-control" name="telefono" placeholder="Introduzca telefono">
+			<input type="tel" id="input" class="form-control" name="telefono" placeholder="Introduzca telefono">
 		</div> <br>
     <div class="form-group">
 			<label >Contraseña:</label>
-			<input type="password" class="form-control"placeholder="Mayusculas, minusculas y numeros" name="contra" id="contra">
+			<input type="password"  id="input" class="form-control"placeholder="Mayusculas, minusculas y numeros" name="contra" id="contra">
 		</div>
         <br><p>Aun no tienes una cuenta <a href="<?php echo constant('URL');?>registro_cliente" id="link">Registrarse </a> </p>
        

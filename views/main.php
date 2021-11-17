@@ -31,11 +31,17 @@
         </figure>
         </td> 
     </tr>
+    <tr>
+    <td colspan="3">
+    <?php require 'views/footer.php';?>
+
+        <td>
+</tr>
 </table>
 </div>
         </div>
-        <?php require 'views/footer.php';?>
 </div>
+
    </body>
 
 </html>

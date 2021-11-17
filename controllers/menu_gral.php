@@ -15,7 +15,8 @@
         $this->view->render('menu_gral');
        }
        
-
+ 
+       
     function verPlatillo($param = null){
         $id_platillos = $param[0];
         $platillo = $this->model->getById($id_platillos);

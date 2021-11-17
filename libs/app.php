@@ -12,7 +12,7 @@ require_once 'controllers/errores.php';
                 $archivoController='controllers/main.php';
                 require_once $archivoController;
                 $controller=new Main();
-                $controller->render();
+              //  $controller->render();
                 $controller->loadModel('main');
                 return false;
             }

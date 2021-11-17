@@ -119,6 +119,7 @@ ul{list-style-type: none;}
  .btn-default.active,.btn-default:active,.open>.dropdown-toggle.btn-default{background-image:none}
  .btn-default.disabled.focus,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled].focus,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{background-color:#fff;border-color:#ccc}
  .btn-default .badge{color:#fff;background-color:#333}
+ 
  .btn-primary{
      color:#fff;
      

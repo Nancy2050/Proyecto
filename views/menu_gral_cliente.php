@@ -13,7 +13,7 @@
     <?php require 'views/header.php';?>
 
 </head>
-<h1>MENU DEL ESTABLECIMIENTO</h1>
+<h1>MENU</h1>
 <table width="100" id="tabla_platos" >
     
 <thead>
@@ -21,7 +21,7 @@
     <th>Nombre</th>
     <th>Descripcion</th>
     <th>Precio</th>
-    <th colspan="3">Editar</th>
+    <th ></th>
 </tr>
 </thead>
 <tbody>
@@ -35,18 +35,15 @@
     <tr id="filas">
         <td><?php echo $platillo->nombre;?></td>
         <td><?php echo $platillo->caracteristicas;?></td>
+        
         <td><?php echo $platillo->precio;?></td>
 
-        <td><a href="<?php echo constant('URL').'menu_gral/verPlatillo/'.$platillo->id_platillos?> ">Modificar</td>
-        <td><a href="<?php echo constant('URL').'menu_gral/eliminarPlatillo/'.$platillo->id_platillos?> ">Eliminar</td>
-        <td><a href="<?php echo constant('URL').'menu_gral/ofertarPlatillo/'.$platillo->id_platillos?> ">Ofertar</td>
+        <td><a href="<?php echo constant('URL').'menu_gral_cliente/Carrito/'.$platillo->id_platillos?> ">
+        <button id="btn">Agregar</button></td>
         
         <?php }?>
     </tr>
    
 </tbody>
 </table>
-<a href="<?php echo constant('URL');?>menu_establecimiento" id="barra">
-        <button class="redondo" id="dos">
-        AÑADIR PLATILLO</button></a>
 </html>

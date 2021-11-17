@@ -8,7 +8,7 @@
     <meta http-equiv="Expires" content="0"> <meta http-equiv="Last-Modified" content="0"> 
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate"> 
     <meta http-equiv="Pragma" content="no-cache"> 
-    <title>MENÚ</title>
+    <title>DETALLE PLARILLO</title>
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
 
 </head>

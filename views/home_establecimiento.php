@@ -1,5 +1,10 @@
 <?php
-
+ /**
+   * Incluye documentos para conectar a base de datos
+   * Accede a nuevomodel donde esta iniciarsesion1
+   * Model instancia a la base de datos
+   *
+   */
 include_once("./libs/database.php");
 include_once("./models/nuevomodel.php");
 include_once("./libs/model.php");
@@ -48,11 +53,11 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
         <button class="redondo" id="uno">
         MENU</button></a></li>
         <li></li>
-        <li ><a href="<?php echo constant('URL');?>ofertas" id="barra">
+        <li ><a href="<?php echo constant('URL');?>ofertas_gral" id="barra">
         <button class="redondo" id="dos">
         OFERTAS</button></a></li>
         <li></li>
-        <li ><a href="<?php echo constant('URL');?>redes_sociales" id="barra">
+        <li ><a href="<?php echo constant('URL');?>redes" id="barra">
         <button class="redondo" id="tres">
         REDES SOCIALES</button></a></li>
         <li></li>
