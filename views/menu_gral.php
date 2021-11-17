@@ -14,6 +14,7 @@
 
 </head>
 <h1>MENU DEL ESTABLECIMIENTO</h1>
+    <h6>Datos generales</h6>
 <table width="100" id="tabla_platos" >
     
 <thead>
@@ -45,6 +46,7 @@
     </tr>
    
 </tbody>
+
 </table>
 <a href="<?php echo constant('URL');?>menu_establecimiento" id="barra">
         <button class="redondo" id="dos">

@@ -5,18 +5,15 @@
        function __construct() 
        {
            parent::__construct();
-           
+                      
            $this->view->platillo=[];
        }
-       function render(){
+      function render(){
            
         $platillo=$this->model->get();
         $this->view->platillo=$platillo;           
         $this->view->render('menu_gral');
        }
-       
- 
-       
     function verPlatillo($param = null){
         $id_platillos = $param[0];
         $platillo = $this->model->getById($id_platillos);
@@ -46,7 +43,7 @@
         }
         $this->view->render('home_establecimiento');
     }
-    function eliminarPlatillo($param=null){
+          function eliminarPlatillo($param=null){
         $id_platillos=$param[0];
         
         if($this->model->delete($id_platillos)){
@@ -59,6 +56,8 @@
         }     
         echo $mensaje;
     }
+      
+      
    }
 
 ?>
