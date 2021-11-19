@@ -59,7 +59,27 @@ class NuevoModel extends Model{
             return false;
         }
     }
+    public function insertaroferta($datos){
+        require_once("./views/islogin.php");
 
+        try{
+            //Realiza la conexión con la base de datos y usa sentencias de insercion en tabla platillos
+            $query=$this->db->connect()->prepare('INSERT INTO oferta (nombre, especificacion, prec_anterior, descuento, id_establecimiento) 
+            VALUES (:nombre, :especificacion, :prec_anterior, :descuento, :id_establecimiento)');
+
+            //Asigna los parametros segun el dato en el arreglo recibido, realiza la insercion con execute    
+            if($query->execute(['nombre'=>$datos['nombrecompleto'],'especificacion'=>$datos['cara'], 'prec_anterior'=>$datos['precio'], 'descuento'=>$datos['preciodesc'], 
+            'id_establecimiento'=>$idusuario])){
+            
+                return true;
+            }else{
+                return false;
+            }
+        }catch(PDOException $e){ $this->view->mensaje = "Ya existe la oferta";
+            $this->view->render('menu_establecimiento');  
+            return false;
+        }
+    }
 
     
     public function iniciarsesion1($telefono,$contra){

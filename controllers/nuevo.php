@@ -4,6 +4,8 @@
        function __construct() 
        {
            parent::__construct();
+           $this->view->mensaje = "";
+
        }
        //Funcion para insercion de comensal en base de datos
        function registrarCliente(){
@@ -123,6 +125,35 @@
            
        }
         }
+        
+      function agregarOferta(){
+         if (isset($_POST['actualizar'])) {
+            if (strlen($_POST['nombrecompleto']) >= 1 &&
+            strlen($_POST['cara']) >= 1 &&
+            strlen($_POST['precio']) >= 1 &&
+            strlen($_POST['preciodesc']) >= 1) {
+                $nombrecompleto = trim($_POST['nombrecompleto']);
+                $cara = trim($_POST['cara']);
+                $precio = trim($_POST['precio']);
+                $preciodesc = trim($_POST['preciodesc']);
+        }
+      }
+
+       //Crea un objeto con los valores a insertar
+       $oferta=['nombrecompleto'=>$nombrecompleto,'cara'=>$cara,'precio'=>$precio, 'preciodesc'=>$preciodesc];
+       //Si los datos no estan duplicados o erroneos, abre la pagina inicial
+     if($this->model->insertaroferta($oferta))
+     {
+      $this->view->mensaje = "Nueva oferta registrada";
+      require_once 'views/ofertas.php';
+
+     }else
+     {
+      $this->view->mensaje = "Error oferta duplicada o revise la informacion capturada";
+      $this->view->render('errores');  
+         
+     }
+      }
 
    }
 

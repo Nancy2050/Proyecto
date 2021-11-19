@@ -45,7 +45,7 @@
    
 </tbody>
 </table>
-<a href="<?php echo constant('URL');?>menu_establecimiento" id="barra">
+<a href="<?php echo constant('URL');?>ofertas" id="barra">
         <button class="redondo" id="dos">
         AÑADIR OFERTA</button></a>
 </html>

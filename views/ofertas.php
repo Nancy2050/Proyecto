@@ -15,8 +15,7 @@
 <body id="inicial">
 <?php require 'views/header.php';?>
 
-    <form id="login" name="login" action="" method="post" autocomplete="off">
-	
+    <form id="login" name="login" action="<?php echo constant('URL');?>nuevo/agregarOferta" method="post" autocomplete="off">
     <div class="form-group">
 			<label>Nombre:</label>
 			<input type="text" class="form-control" id="nombrecompleto" name="nombrecompleto" placeholder="Introduzca nombre de platillo">
@@ -33,14 +32,17 @@
 			</div> <br>
 	<div class="form-group">
 			<label>Precio con descuento:</label>
-			<input type="number" class="form-control" name="precio" id="precio" >
+			<input type="number" class="form-control" name="preciodesc" id="precio" >
 			</div> <br>							
 				<!--	<form id="login" name="login" action="upload.php" method="POST" enctype="multipart/form-data">
 					<input style="position:absolute; top:350px;left:200px;" type="file" name="file">
 					<p><img class="img5" src="<?php echo constant('URL');?>public/imagen/galeria.png" alt="mas"></p>
 					</form>-->
-					<img style="width:50px;"src="<?php echo constant('URL');?>public/imagen/mas.png" alt="mas">     
-					<input type="submit" id="platillos" class="btn btn-primary btn-block"  value="ACTUALIZAR" onclick="menu_es()"></input>
+					
+					<input type="submit" id="platillos" class="btn btn-primary btn-block"  value="ACTUALIZAR" onclick="menu_es()" name="actualizar">
+
+				</input>
                 </form>
+				<p id="bot"><input type="submit" id="ofertas" name="mostrar_ofertas" value="Visualizar ofertas disponibles" href="<?php echo constant('URL');?>ofertas_gral" class="boton"></p> 
 </body>
 </html>

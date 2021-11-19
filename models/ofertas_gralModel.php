@@ -1,14 +1,14 @@
 <?php
 include_once 'models/oferta.php';
 
-   class oferta_gralModel extends Model
+   class ofertas_gralModel extends Model
    {
 
       public function __construct() 
        {
            parent::__construct();
        }
-       public function get(){ 
+       public function getOfertas(){ 
             $items=[];
         try{
             
@@ -18,10 +18,10 @@ include_once 'models/oferta.php';
             while($row=$query->fetch((PDO::FETCH_ASSOC))){
                 $item=new oferta();
                 $item->nombre=$row['nombre'];
-                $item->descuento=$row['descuento'];
                 $item->especificacion=$row['especificacion'];
+                $item->prec_anterior=$row['prec_anterior'];
+                $item->descuento=$row['descuento'];
                 $item->id_establecimiento=$row['id_establecimiento'];
-                $item->tiempo=$row['tiempo'];
                 $item->id_ofertas=$row['id_ofertas'];
 
                 array_push($items,$item);
