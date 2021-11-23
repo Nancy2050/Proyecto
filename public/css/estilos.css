@@ -1,25 +1,138 @@
 
 @import url('bootstrap.min.css');
 
+ /************************** DOCUMENTO GENERAL ************************/
+
+html
+{
+	font-size:10px;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+body{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size:14px;line-height:1.42857143;
+	color:#333;
+	background-color:rgb(255, 229, 204)
+}
+ /************************** MAIN ************************/
+
+/*BARRA ENCABEZADO DE PAGINA INICIAL*/
+.header-main{
+	height: 50px;
+}
+/*CONTENIDO DE ENCABEZADO PRINCIPAL*/
+
+.elementos-header{
+	display: flex;
+	justify-content: space-between;	
+	background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(121,9,19,1) 35%, rgba(255,106,0,1) 100%);
+}
+.textos-sesion{
+	margin-right: 2%;;
+
+	color: rgb(255, 255, 255);
+}
+/*LOGO ESQUINA SUPERIOR*/
+.logo{
+	width: 200px;
+	/*MARGEN ARRIBA,DERECHO,ABAJO,IZQUIERDO*/
+	vertical-align: baseline;
+}
+/*IMAGEN PUBLICITARIA MAIN*/
+.contenedor{
+    text-align: center;
+}
+.imagen-publi{
+	vertical-align: middle;
+	opacity: 0.9;
+	height: 800px;
+
+}
+/*TEXTO DE IMAGEN PUBLICITARIA*/
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);color: white; 
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	line-height: 1.1;
+	font-weight: 500;
+}
+.cuerpo-centrado{
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);color: white; 
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	line-height: 1.1;
+}
+ /************************** CARDS DE MAIN ************************/
+ .contenedor-cards{
+margin-left: 5%;
+margin-right:5%;
+}
+.row{
+	display: inline;
+	margin-left: 0.8%;
+}
+.titulo-card{
+height: 300px;
+display: grid;
+place-content: center;
+color: white; 
+text-shadow: black 0.1em 0.1em 0.2em;
+background-color: rgb(65, 0, 0);
+}
+.card{
+height: 100%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+small{
+float: right;
+font-size: 14px;
+font-weight: 500;
+color: #A19882;
+}
+.btn-cards{
+padding: 6px 25px;
+margin:1% 1% 1% 60%;
+color:rgb(182, 73, 0);     
+border-radius: 20px;
+ font-weight: bold;
+ background-color:#74ff58e9;
+ border-color:#5a0000
+}
+
+@media(max-width: 768px){
+img{
+height: 100%;
+}
+}
+@media(max-width: 575px){
+.contenedor-cards,.contenedor{
+width: 90%;
+}
+.titulo-card{
+height: 250px;
+}
+}
+
+ /************************** LOGINS DE ESTABLECIMIENTO Y USUARIO ************************/
 
 #inicial{
-	/*background-color: rgb(245, 170, 72);*/
-
 	padding: 400px -200px;
 	background-position: top top;
 	background-size:cover;
 	background-repeat: repeat;
 	position: absolute;
 	z-index: 1;
-
 	color: black;
 	width: 100%;
 	height:100%;
 	
 
-}
-.estab{
-	background-image:url("../IMG/fondo.jpg"); ;
 }
 #login {
 	width: 450px;
@@ -30,9 +143,9 @@
 	left:65%;
 	padding: 45px;
 	transform: translate(-50%, -50%);
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	border-color: rgb(39, 189, 61);
-	background-color: #381b1ba6;
+	background-color: #f5d7b7bb;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
@@ -44,6 +157,22 @@
 	background-image:url("../IMG/fondo.jpg"); ;
 	filter: blur(6px);
 }
+#telefono{
+	color: rgb(0, 0, 0);
+}
+
+#titulo{
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px;
+	padding: 12px;
+	color: rgb(75, 0, 0)
+}
+ /************************** VARIOS************************/
+ #nuevo{
+width: 100%; }
+ /************************** ERRORES************************/
+
 #error {
 	width: 80%;
 	border-radius: 4px;
@@ -98,8 +227,7 @@
 	text-shadow: 0 -1px 0 rgba(248, 138, 64, 0.904);
 	
 }
-#datos {
-	
+#datos {	
 	width: 50%;
 	border-radius: 4px;
 	position: absolute;
@@ -135,12 +263,6 @@
 	left:50%;
 	width: 300x;
 }
-#titulo{
-	font-weight: bold;
-	text-align: center;
-	padding: 12px;
-	color: rgb(206, 203, 203)
-}
 #link{
 	color: rgb(68, 223, 29);
     font-weight: bold;
@@ -164,7 +286,7 @@ td {
 	text-decoration-style: inherit;
 	font-size: 30px;
 	font-weight: bold;
-	-webkit-text-fill-color: rgb(250, 151, 58);
+	-webkit-text-fill-color: rgb(255, 255, 255);
 	-webkit-text-stroke: 0.8px black;
 	text-shadow: 4px -2px 2px #b10404; /*derecha/izquierda, arriba/abajo, profundidad/alejamiento*/
 }
@@ -244,25 +366,20 @@ top: 8%;
 
 }
 
+ /************************** TABLA DE CONSULTA ************************/
+
 h1, table { text-align: center; }
-
 table {border-collapse: collapse;  width: 70%; margin: 0 auto 5rem;}
-
 th, td { padding: 1.5rem; font-size: 1.3rem; }
-
-#filas {background: hsl(50, 50%, 80%); }
-
+/*COLOR FILAS 1,3, IMPARES*/
+#filas {background: hsl(36, 91%, 70%); }
+/*COLOR FILAS PARES*/
+#filas:nth-child(even) { background: hsla(48, 100%, 81%, 0.7); }
 tr, td { transition: .4s ease-in; } 
-
 #firstrow {background: hsla(12, 100%, 40%, 0.5); }
-
-#filas:nth-child(even) { background: hsla(50, 50%, 80%, 0.7); }
-
-td:empty {background: hsla(50, 25%, 60%, 0.7); }
-
+td:empty {background: hsl(29, 82%, 53%); }
 #filas:hover:not(#firstrow), td:empty {background: rgb(243, 143, 67); pointer-events: visible;}
 #filas:hover { transform: scale(1.0); font-weight: 700; box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);}
-
 #fila_vacia{
 	background:rgb(255, 171, 97);
 }
@@ -276,3 +393,4 @@ td:empty {background: hsla(50, 25%, 60%, 0.7); }
 #logo_restaurante{
 	width: 10px;
 }
+

@@ -20,6 +20,29 @@
         $this->view->oferta=$oferta;           
         $this->view->render('ofertas_gral');
     }
+    function verOferta($param = null){
+        $id_platillos = $param[0];
+        $oferta = $this->model->getByIdOfertas($id_platillos);
+        
+        $this->view->oferta = $oferta;
+        $this->view->mensaje = "";
+      //  $this->view->render('detallePlato_establecimiento');
+    }
+       
+    
+          function eliminarOferta($param=null){
+        $id_platillos=$param[0];
+        
+        if($this->model->deleteOfertas($id_platillos)){
+
+         //   $mensaje = 'Platillo eliminado';
+            $this->view->render('ofertas_gral');
+
+        }else{
+            $mensaje = 'No se pudo eliminar el platillo';
+        }     
+        echo $mensaje;
+    }
 
    }
 

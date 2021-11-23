@@ -41,14 +41,21 @@ class NuevoModel extends Model{
     }
     public function insertarplato($datos){
         require_once("./views/islogin.php");
-
+        $idusuario=$_SESSION['id_establecimiento'];
         try{
             //Realiza la conexión con la base de datos y usa sentencias de insercion en tabla platillos
-            $query=$this->db->connect()->prepare('INSERT INTO platillos (NOMBRE, PRECIO, CARACTERISTICAS,ID_ESTABLECIMIENTO) 
-            VALUES (:nombre, :precio, :caracteristicas, :id_establecimiento)');
+            $query=$this->db->connect()->prepare('INSERT INTO platillos (NOMBRE, PRECIO, CARACTERISTICAS,ID_ESTABLECIMIENTO,IMAGEN) 
+            VALUES (:nombre, :precio, :caracteristicas, :id_establecimiento, :imagen)');
             //Asigna los parametros segun el dato en el arreglo recibido, realiza la insercion con execute    
-            if($query->execute(['nombre'=>$datos['nombre'],'precio'=>$datos['precio'], 'caracteristicas'=>$datos['cara'], 
-            'id_establecimiento'=>$idusuario])){
+            if($query->execute(
+                [
+                    'nombre'=>$datos['nombre'],
+                    'precio'=>$datos['precio'], 
+                    'caracteristicas'=>$datos['cara'],
+                    'id_establecimiento'=>$idusuario,
+                    'imagen'=>$datos['imagen']
+                    ]
+                )){
             
                 return true;
             }else{

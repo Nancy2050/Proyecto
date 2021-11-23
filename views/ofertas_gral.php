@@ -37,8 +37,8 @@
         <td><?php echo $oferta->especificacion;?></td>
         <td><?php echo $oferta->descuento;?></td>
 
-        <td><a href="<?php echo constant('URL').'menu_gral/verOferta/'.$oferta->id_establecimiento?> ">Modificar</td>
-        <td><a href="<?php echo constant('URL').'menu_gral/eliminarOferta/'.$oferta->id_establecimiento?> ">Eliminar</td>
+        <td><a href="<?php echo constant('URL').'ofertas_gral/verOferta/'.$oferta->id_establecimiento?> ">Modificar</td>
+        <td><a href="<?php echo constant('URL').'ofertas_gral/eliminarOferta/'.$oferta->id_establecimiento?> ">Eliminar</td>
         
         <?php }?>
     </tr>

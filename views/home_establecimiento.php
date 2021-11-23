@@ -35,18 +35,22 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
     <title>HOME ESTABLECIMIENTO</title>
 </head>
 <body >
-<div id="header2">
-    <ul class="clearfix" >
-        <li><a href="<?php echo constant('URL');?>home_establecimiento"> &#x1F37D Food.exe</a></li>
-        
-    </ul>
-   </div>  
-   <div id="lateral">
-    <ul class="clearfix" >
-       <li></li>
-        
-    </ul>
-   </div>
+
+        <!--Encabezado-->
+        <div class="header-main">
+          <div class="main-content">
+            <ul class="elementos-header">
+            <!--ICONO PRINCIPAL ESQUINA SUPERIOR-->
+            <a href=""> <img src="<?php echo constant('URL');?>public/IMG/logo.png" class="logo"></a>
+
+            <!--SESION CON NOMBRE ESTABLECIMIENTO--> <li>    
+            <a href="" class="textos-sesion">        
+             <img src="<?php echo constant('URL');?>public/IMG/empresa.png" class="textos-sesion" height="30px" width="30px"/> 
+                 <span> <?php echo utf8_decode($row['nombre']);?></span></a></li>
+            </ul>
+    </div>
+</div>
+
 <article id="tabla">
       <ul id="menu">
         <li ><a href="<?php echo constant('URL');?>menu_gral" id="barra">
@@ -78,6 +82,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
         
     </ul>
 </article>
+
       <article id="datos">
     <h3 id="food">DATOS DEL ESTABLECIMIENTO</h3>
     <img  id="imglogo" src="<?php echo constant('URL');?>public/IMG/empresa.png" alt="descripción" />

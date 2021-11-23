@@ -30,8 +30,8 @@
     <h3 class="center">Detalle de <?php echo $platillo->nombre; ?> </h3>
    
     <div class="form-group">
-			<label>Platillo:</label>
-			<input type="text" name="id_platillos" id="id_platillos" class="form-control"  value="<?php echo $platillo->id_platillos; ?>" required>
+			<label>Platillo:</label> <!--RECORDAR: Redonly para tener id_platillo pero que no se pueda modificar-->
+			<input type="text" name="id_platillos" id="id_platillos" class="form-control" readonly value="<?php echo $platillo->id_platillos; ?>" required>
 		</div> <br>
     <div class="form-group">
 			<label>Nombre:</label>
