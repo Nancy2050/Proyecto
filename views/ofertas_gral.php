@@ -37,15 +37,22 @@
         <td><?php echo $oferta->especificacion;?></td>
         <td><?php echo $oferta->descuento;?></td>
 
-        <td><a href="<?php echo constant('URL').'ofertas_gral/verOferta/'.$oferta->id_establecimiento?> ">Modificar</td>
-        <td><a href="<?php echo constant('URL').'ofertas_gral/eliminarOferta/'.$oferta->id_establecimiento?> ">Eliminar</td>
+        <td><a href="<?php echo constant('URL').'ofertas_gral/verOferta/'.$oferta->id_ofertas?> ">Modificar</td>
+        <td><a href="<?php echo constant('URL').'ofertas_gral/eliminarOferta/'.$oferta->id_ofertas?> ">Eliminar</td>
         
         <?php }?>
     </tr>
    
 </tbody>
+
+<tfoot>
+    <tr id="firstrow">
+    <th colspan="6" >
+        <a href="<?php echo constant('URL');?>ofertas" id="barra">
+        <button class="redondo" >AÑADIR OFERTA</button></a>
+    </th>
+</tr>
+</tfoot>
+
 </table>
-<a href="<?php echo constant('URL');?>ofertas" id="barra">
-        <button class="redondo" id="dos">
-        AÑADIR OFERTA</button></a>
 </html>

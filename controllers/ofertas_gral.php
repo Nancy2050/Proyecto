@@ -21,22 +21,48 @@
         $this->view->render('ofertas_gral');
     }
     function verOferta($param = null){
-        $id_platillos = $param[0];
-        $oferta = $this->model->getByIdOfertas($id_platillos);
+        $id_ofertas = $param[0];
+        $oferta = $this->model->getByIdOfertas($id_ofertas);
         
         $this->view->oferta = $oferta;
         $this->view->mensaje = "";
-      //  $this->view->render('detallePlato_establecimiento');
+        $this->view->render('detalleOferta_establecimiento');
+    }
+    function actualizarPlatillo(){
+        
+        $id_ofertas=$_POST['id_oferta'];
+        $nombre=$_POST['nombre'];
+        $especificacion  = $_POST['especificacion'];
+        $prec_anterior=$_POST['prec_anterior'];
+        $descuento=$_POST['descuento'];
+
+
+        if($this->model->updateOfertas(['id_ofertas'=>$id_ofertas,'nombre' => $nombre, 
+        'especificacion' => $especificacion,'prec_anterior' => $prec_anterior,'descuento'=> $descuento] )){
+            // actualizar platillo exito
+            $oferta = new Oferta();
+            $oferta->id_ofertas = $id_ofertas;
+            $oferta->nombre = $nombre;
+            $oferta->especificacion = $especificacion;
+            $oferta->prec_anterior = $prec_anterior;
+            $oferta->descuento = $descuento;
+
+            $this->view->oferta = $oferta;
+        }else{
+            // mensaje de error
+            echo "No se pudo actualizar el platillo";
+        }
+        $this->view->render('home_establecimiento');
     }
        
     
           function eliminarOferta($param=null){
-        $id_platillos=$param[0];
+        $id_ofertas=$param[0];
         
-        if($this->model->deleteOfertas($id_platillos)){
+        if($this->model->deleteOfertas($id_ofertas)){
 
          //   $mensaje = 'Platillo eliminado';
-            $this->view->render('ofertas_gral');
+            $this->view->render('home_establecimiento');
 
         }else{
             $mensaje = 'No se pudo eliminar el platillo';

@@ -7,9 +7,9 @@ class NuevoModel extends Model{
 
         try{
 //Realiza la conexión con la base de datos y usa sentencias de insercion en tabla clientes
-            $query=$this->db->connect()->prepare('INSERT INTO cliente (USUARIO, TELEFONO, CONTRA) VALUES (:usuario, :telefono, :contra)');
+            $query=$this->db->connect()->prepare('INSERT INTO cliente (USUARIO, TELEFONO, CONTRA,UBICACION) VALUES (:usuario, :telefono, :contra, :ubicacion)');
 //Asigna los parametros segun el dato en el arreglo recibido, realiza la insercion con execute
-            if($query->execute(['usuario'=>$datos['usuario'],'telefono'=>$datos['telefono'], 'contra'=>$datos['contra']])){
+            if($query->execute(['usuario'=>$datos['usuario'],'telefono'=>$datos['telefono'], 'contra'=>$datos['contra'],'ubicacion'=>$datos['ubicacion']])){
                 //si la insercion es exitosa devuelve un valor verdadero
                 return true;
             }else{
@@ -25,10 +25,10 @@ class NuevoModel extends Model{
     public function insert2($datos){
         try{
             //Realiza la conexión con la base de datos y usa sentencias de insercion en tabla Establecimiento
-            $query=$this->db->connect()->prepare('INSERT INTO establecimiento (NOMBRE, TELEFONO, CONTRA, DOC_VALIDA, HORARIO) 
-            VALUES (:nombre, :telefono, :contra, :doc_valida, :horario)');
+            $query=$this->db->connect()->prepare('INSERT INTO establecimiento (NOMBRE, TELEFONO, CONTRA, DOC_VALIDA, HORARIO, UBICACION) 
+            VALUES (:nombre, :telefono, :contra, :doc_valida, :horario, :ubicacion)');
             //Asigna los parametros segun el dato en el arreglo recibido, realiza la insercion con execute    
-            if($query->execute(['nombre'=>$datos['nombre'],'telefono'=>$datos['telefono'], 'contra'=>$datos['contra'], 'doc_valida'=>$datos['doc_valida'], 'horario'=>$datos['horario']])){
+            if($query->execute(['nombre'=>$datos['nombre'],'telefono'=>$datos['telefono'], 'contra'=>$datos['contra'], 'doc_valida'=>$datos['doc_valida'], 'horario'=>$datos['horario'],'ubicacion'=>$datos['ubicacion']])){
             
                 return true;
             }else{

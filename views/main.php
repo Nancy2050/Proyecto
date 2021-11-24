@@ -16,9 +16,8 @@
         <div class="main-content">
             <ul class="elementos-header">
             <!--ICONO PRINCIPAL ESQUINA SUPERIOR-->
-            <a href="">
+            <a href="#">
             <img src="<?php echo constant('URL');?>public/IMG/logo.png" class="logo">
-
             </a>
             <!--INICIO DE SESION DEL COMENSAL--><li>  
             <a href="<?php echo constant('URL');?>inicio_cliente" class="textos-sesion" >
@@ -104,6 +103,8 @@
         </div>
         
     </div>
+    <br><br><br>
+    <?php require 'views/footer.php';?>
 
 </body>
 

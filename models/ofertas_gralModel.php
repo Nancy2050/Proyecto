@@ -44,7 +44,7 @@ include_once 'models/oferta.php';
                 $item->prec_anterior=$row['prec_anterior'];
                 $item->descuento=$row['descuento'];
                 $item->id_establecimiento=$row['id_establecimiento'];
-                $item->id_platillos=$row['id_ofertas'];
+                $item->id_ofertas=$row['id_ofertas'];
                 
                 array_push($items,$item);
             }
@@ -70,9 +70,8 @@ include_once 'models/oferta.php';
        }
        public function deleteOfertas($id){
          try{
-            $query = $this->db->connect()->query("DELETE FROM oferta WHERE id_ofertas = :'$id'");
+            $query = $this->db->connect()->query("DELETE FROM oferta WHERE id_ofertas = '$id'");
     
-          //  $query->execute(['id_platillos'=> $id ]);
             return true;
         }catch(PDOException $e){
             return false;

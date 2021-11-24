@@ -16,8 +16,6 @@
 <?php require 'views/header.php';
    
 ?>
-
-<img  id="i" src="<?php echo constant('URL');?>public/IMG/icono.png" alt="descripción" />
 <?php    
     include_once 'models/platillo.php';
     foreach ($this->platillo as $row){
@@ -27,7 +25,7 @@
         ?>
     <!--Los datos del formulario son enviados a ingresar.php ahi se usan para almacenarlos en la base de datos-->
     <form action="<?php echo constant('URL');?>menu_gral/actualizarPlatillo" method="post" id="login" class="login">
-    <h3 class="center">Detalle de <?php echo $platillo->nombre; ?> </h3>
+    <h3 class="center">MODIFICACION DE <?php echo $platillo->nombre; ?> </h3>
    
     <div class="form-group">
 			<label>Platillo:</label> <!--RECORDAR: Redonly para tener id_platillo pero que no se pueda modificar-->
@@ -45,13 +43,6 @@
 			<label>Precio:</label>
 			<input type="number" class="form-control" name="precio" id="precio" value="<?php echo $platillo->precio; ?>" required>
 		</div> <br>
-        <!--
-        <div class="form-group">
-			<label>Imagen de muestra:</label>
-			<input type="file" class="form-control"name="imgplatillo" id="imgplatillo" >
-		</div> <br>-->
-
-    <!--Al presionar el boton, se validan datos desde javascript y luego si son validos se almacenan en la base de datos-->
     <input type="submit" id="platillos" class="btn btn-primary btn-block"  value="ACTUALIZAR PLATILLO" ></input>
     <?php }?>
 

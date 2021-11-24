@@ -25,7 +25,7 @@
 
       <form action="<?php echo constant('URL');?>nuevo/sesion1" method="post" id="login" class="login">
     <h3  id="titulo">INICIAR SESION ESTABLECIMIENTO</h3>
-		<img  id="imglogo" src="<?php echo constant('URL');?>public/IMG/empresa.png" alt="descripción" />
+		<img  id="imglogo" src="<?php echo constant('URL');?>public/IMG/empresa.png" alt="empresa" /> <br> <br>
         <div class="form-group">
 			<label>Telefono:</label>
 			<input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Introduzca telefono">

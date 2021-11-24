@@ -4,5 +4,6 @@ class cliente{
     public $telefono;
     public $ubicacion;
     public $contra;
+    public $id_cliente;
 }
 ?>

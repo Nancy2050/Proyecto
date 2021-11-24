@@ -16,8 +16,6 @@
 </head>
 <body id="inicial" class="con-fondo">
 <?php require 'views/header.php';?>
-<img  id="i" src="<?php echo constant('URL');?>public/IMG/icono.png" alt="descripción" />
-
     <!--Los datos del formulario son enviados a ingresar.php ahi se usan para almacenarlos en la base de datos-->
     <form action="<?php echo constant('URL');?>nuevo/agregarPlatillo" enctype="multipart/form-data" method="post" id="login" class="login">
     <h3  id="titulo">PLATILLOS</h3>

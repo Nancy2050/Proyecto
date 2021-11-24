@@ -1,5 +1,5 @@
 <?php
-class oferta{
+class Oferta{
     public $id_ofertas;
     public $nombre;
     public $especificacion;

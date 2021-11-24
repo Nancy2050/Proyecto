@@ -12,11 +12,11 @@ $this->db=new Database();
 $db = $this->db->connect();
 error_reporting(0);
 session_start();
-$idusuario=$_SESSION['id_establecimiento'];
+$idusuario=$_SESSION['id_establecimiento'];//Obtiene id de la sesion iniciada
 $query= $db->prepare("SELECT * FROM establecimiento WHERE id_establecimiento='$idusuario'");
 $query->execute();
 
-$row=$query->fetch(PDO::FETCH_ASSOC);
+$row=$query->fetch(PDO::FETCH_ASSOC);//devuelve columnas de elementos del establecimiento
 ?>
 
 <!DOCTYPE html>
@@ -25,15 +25,15 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css" type="text/css">
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/barra.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/barra.js" type="text/css">
-   
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/barra.js" type="text/css">       <!--TITULO E ICONO EN PESTAÑA DEL NAVEGADOR-->
+    <title>HOME ESTABLECIMIENTO</title> <link rel="shortcut icon" href="<?php echo constant('URL');?>public/IMG/icono.png"> 
 
-
-    <title>HOME ESTABLECIMIENTO</title>
 </head>
+
 <body >
 
         <!--Encabezado-->
@@ -41,65 +41,72 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
           <div class="main-content">
             <ul class="elementos-header">
             <!--ICONO PRINCIPAL ESQUINA SUPERIOR-->
-            <a href=""> <img src="<?php echo constant('URL');?>public/IMG/logo.png" class="logo"></a>
+            <a href="#"> 
+              <img src="<?php echo constant('URL');?>public/IMG/logo.png" class="logo"></a>
 
             <!--SESION CON NOMBRE ESTABLECIMIENTO--> <li>    
-            <a href="" class="textos-sesion">        
-             <img src="<?php echo constant('URL');?>public/IMG/empresa.png" class="textos-sesion" height="30px" width="30px"/> 
-                 <span> <?php echo utf8_decode($row['nombre']);?></span></a></li>
+                 <span> <?php echo utf8_decode($row['nombre']);?></span>
+                 <img src="<?php echo constant('URL');?>public/IMG/negocio.png" height="30px" width="30px"/> 
+                </li>
             </ul>
     </div>
-</div>
+</div> <br><br>
 
-<article id="tabla">
-      <ul id="menu">
-        <li ><a href="<?php echo constant('URL');?>menu_gral" id="barra">
-        <button class="redondo" id="uno">
-        MENU</button></a></li>
-        <li></li>
+<div id="barra-lateral" class="barra-lateral">
+  
+      <ul>
+        <li ><a href="<?php echo constant('URL').'menu_gral/render/'.$row['id_establecimiento']?>" id="barra">
+        <button class="redondo" >MENU</button></a></li>
+
         <li ><a href="<?php echo constant('URL');?>ofertas_gral" id="barra">
-        <button class="redondo" id="dos">
-        OFERTAS</button></a></li>
-        <li></li>
+        <button class="redondo"> OFERTAS</button></a></li>
+
         <li ><a href="<?php echo constant('URL');?>redes" id="barra">
-        <button class="redondo" id="tres">
-        REDES SOCIALES</button></a></li>
-        <li></li>
+        <button class="redondo" > REDES SOCIALES</button></a></li>
+
         <li ><a href="<?php echo constant('URL');?>mesas" id="barra">
-        <button class="redondo" id="cuatro">
-        MESAS DISPONIBLES</button></a></li>
-        <li></li>
+        <button class="redondo"> MESAS DISPONIBLES</button></a></li>
+
         <li ><a href="<?php echo constant('URL');?>lista_pedidos" id="barra">
-        <button class="redondo" id="cinco">
-        LISTA DE PEDIDOS</button></a></li>
-        <li></li>
+        <button class="redondo">  LISTA DE PEDIDOS</button></a></li>
+
         <li ><a href="<?php echo constant('URL');?>mapa" id="barra">
-        <button class="redondo" id="seis">
-          MAPA</button></a></li>
-        <li></li>
+        <button class="redondo" > MAPA</button></a></li>
+
         <li ><a href="<?php echo constant('URL');?>cerrar" id="barra">
-        <button class="redondo" id="siete">CERRAR SESION</button></a></li>
+        <button class="redondo">CERRAR SESION</button></a></li>
         
-    </ul>
-</article>
-
+    </ul> 
+</div>
       <article id="datos">
-    <h3 id="food">DATOS DEL ESTABLECIMIENTO</h3>
-    <img  id="imglogo" src="<?php echo constant('URL');?>public/IMG/empresa.png" alt="descripción" />
+        <ul>
+          <li>
+              <img  id="perfil-negocio" src="<?php echo constant('URL');?>public/IMG/negocio.png" alt="empresa" />
+               <span id="food"> <?php echo utf8_decode($row['nombre']);?></span>
+            </li> <br><br>
+          <li>
+                <img  id="loguito" src="<?php echo constant('URL');?>public/IMG/restaurante.png" alt="empresa" />
+                <span>Ubicacion: <?php  echo utf8_decode($row['ubicacion']);?></span>
+          </li>
+          <li>
+               <img  id="loguito" src="<?php echo constant('URL');?>public/IMG/telefono.png" alt="empresa" />
+              <span> Telefono : <?php  echo utf8_decode($row['telefono']);?></span>
+          </li>
+          <li>
+              <img  id="loguito" src="<?php echo constant('URL');?>public/IMG/calendario.png" alt="empresa" />
+              <span>Horario : <?php  echo utf8_decode($row['horario']);?></span></h4>
+          </li>
 
-    <h4 style=" text-align: left;">            
-     Nombre : <?php echo utf8_decode($row['nombre']);?><br><br><br>
-    Telefono : <?php  echo utf8_decode($row['telefono']);?><br><br><br>
-    Contraseña : <?php  echo utf8_decode($row['contra']);?><br><br><br>
-    Horario : <?php  echo utf8_decode($row['horario']);?><br><br> <br></h4>
+    <h4 >            
    <h4  style=" text-align: left;">Comentarios : <a href="#" id="barra"> Ver mas... </a><br><br><br></h4>
   
-   <h4 id="x"> <a href="#" id="barra">  &#x270F Editar</a></h4>
+   <h4 id="x"> <a href="<?php echo constant('URL').'consulta/editarEstablecimiento/'.$row['id_establecimiento']?> " id="barra">  &#x270F Editar</a></h4>
 
     </article>
 
     <script src="<?php echo constant('URL');?>public/css/barra.js"></script>
   
 </body>
+<?php require 'views/footer.php';?>
 
 </html>

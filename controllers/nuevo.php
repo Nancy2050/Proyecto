@@ -14,8 +14,9 @@
          $usuario=$_POST['usuario'];
            $telefono=$_POST['telefono'];
            $contra=$_POST['contraseña'];
+           $ubicacion=$_POST['ubicacion'];
            //Crea una estructura con cada uno de los datos a modo de array u objeto
-          $datos=['usuario'=>$usuario,'telefono'=>$telefono,'contra'=>$contra];
+          $datos=['usuario'=>$usuario,'telefono'=>$telefono,'contra'=>$contra,'ubicacion'=>$ubicacion];
         //si al llamar al metodo insert, devuelve un valor verdadero entonces:
         if($this->model->iniciarsesion2($telefono,'no'))
         {
@@ -26,7 +27,7 @@
     //Si los datos no estan duplicados o erroneos, abre la pagina inicial
        if($this->model->insert($datos))
         {
-         echo "Nuevo establecimiento registrado ";
+         echo "Nuevo cliente registrado ";
          require_once 'views/inicio_cliente.php';
 
         }else
@@ -47,6 +48,7 @@
         $contra=$_POST['contraseña'];
         $doc_valida='no especificado';
         $horario='no definido';
+        $ubicacion=$_POST['ubicacion'];
         //Crea un objeto con los valores a insertar
         $datos=['telefono'=>$telefono,'contra'=>$contra];
         
@@ -56,7 +58,7 @@
          $this->view->render('errores');   
 
         }else{
-       $datos2=['nombre'=>$nombre,'telefono'=>$telefono,'contra'=>$contra, 'doc_valida'=>$doc_valida, 'horario'=>$horario];
+       $datos2=['nombre'=>$nombre,'telefono'=>$telefono,'contra'=>$contra, 'doc_valida'=>$doc_valida, 'horario'=>$horario,'ubicacion'=>$ubicacion];
     //Si los datos no estan duplicados o erroneos, abre la pagina inicial
        if($this->model->insert2($datos2))
         {
@@ -148,14 +150,13 @@
          //Si los datos no estan duplicados o erroneos, abre la pagina inicial
        if($this->model->insertarplato($plato))
        {
-        echo "Nuevo platillo registrado ";
-       // <a href="javascript: history.go(-1)">
-       $this->view->render('menu_establecimiento');  
+     //  echo "Nuevo platillo registrado ";
+       $this->view->render('home_establecimiento');  
 
       }else
        {
         $this->view->mensaje = "Error dato duplicado o revise la informacion capturada";
-        $this->view->render('menu_gral');  
+        $this->view->render('home_establecimiento');  
            
        }
         }
@@ -178,8 +179,8 @@
        //Si los datos no estan duplicados o erroneos, abre la pagina inicial
      if($this->model->insertaroferta($oferta))
      {
-      $this->view->mensaje = "Nueva oferta registrada";
-      require_once 'views/ofertas.php';
+      //$this->view->mensaje = "Nueva oferta registrada";
+      $this->view->render('home_establecimiento');  
 
      }else
      {

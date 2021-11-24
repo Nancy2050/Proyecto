@@ -8,7 +8,7 @@
                       
            $this->view->platillo=[];
        }
-      function render(){
+      function render($param =null){
            
         $platillo=$this->model->get();
         $this->view->platillo=$platillo;           

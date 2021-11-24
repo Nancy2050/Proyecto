@@ -7,6 +7,9 @@
            parent::__construct();
            $this->view->render('registro_cliente');
        }
+       function render(){
+           
+       }
 
    }
 

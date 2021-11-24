@@ -44,8 +44,10 @@
 			<label>Archivo comprobatorio:</label>
 			<input type="file" class="form-control" id="archivo" name="archivo">
 		</div> <br>
-   <br><label>Ubicacion:</label><button type="button" name="ubicacion" onclick="geoloc()" >ubicar</button>
-    <label id="demo"></label>
+            <label>Ubicacion:</label>
+            <input type="text" class="form-control" id="ubicacion"  id="ubicacion"name="ubicacion" placeholder="Referencia ubicacion">
+
+   <!--<button type="button" name="ubicacion" onclick="geoloc()" >ubicar</button>-->
     </p>       <br>
     <!--Al presionar el boton, se validan datos desde javascript y luego si son validos se almacenan en la base de datos-->
     <input type="submit" value="REGISTRAR" id="registro" class="btn btn-primary btn-block"></input>

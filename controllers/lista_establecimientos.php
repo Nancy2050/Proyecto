@@ -4,7 +4,7 @@
        function __construct() 
        {
            parent::__construct();
-           $this->view->establecimientos=[];
+           $this->view->establecimientos=[];//crea arreglo de establecimientos
        }
        function render(){
            $establecimientos=$this->model->get();
