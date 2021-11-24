@@ -70,7 +70,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);//devuelve columnas de elementos del establ
         <li ><a href="<?php echo constant('URL');?>lista_pedidos" id="barra">
         <button class="redondo">  LISTA DE PEDIDOS</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>mapa" id="barra">
+        <li ><a href="<?php echo constant('URL');?>ofertas_gral/hola" id="barra">
         <button class="redondo" > MAPA</button></a></li>
 
         <li ><a href="<?php echo constant('URL');?>cerrar" id="barra">
