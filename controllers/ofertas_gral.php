@@ -11,7 +11,9 @@
 
        } 
       function hola(){
-        $this->view->render('errores');
+         $oferta=$this->model->getOfertas();
+        $this->view->oferta=$oferta;           
+        $this->view->render('ofertas_gral');
 
     }
        function render(){
