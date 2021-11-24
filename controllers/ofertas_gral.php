@@ -10,10 +10,13 @@
            $this->view->oferta=[];
 
        } 
-      function hola(){
-         $oferta=$this->model->getOfertas();
+      function hola(){ 
+         try{
+        $oferta=$this->model->getOfertas();
         $this->view->oferta=$oferta;           
-        $this->view->render('ofertas_gral');
+        $this->view->render('ofertas_gral');}catch{
+            echo "Hubo un error de conexion";
+        }
 
     }
        function render(){
