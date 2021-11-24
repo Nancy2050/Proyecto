@@ -9,7 +9,11 @@
 
            $this->view->oferta=[];
 
-       }
+       } 
+      function hola(){
+        $this->view->render('errores');
+
+    }
        function render(){
         //Manda a llamar a la funcion getOfertas que debe estar en el
         //modelo Ofertas_gralModel
