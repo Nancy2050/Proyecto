@@ -10,8 +10,8 @@
        }
       function render($param =null){
            
-        //$platillo=$this->model->get();
-        //$this->view->platillo=$platillo;           
+        $platillo=$this->model->get();
+        $this->view->platillo=$platillo;           
         $this->view->render('menu_gral');
        }
     function verPlatillo($param = null){
