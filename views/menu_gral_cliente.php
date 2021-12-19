@@ -34,7 +34,7 @@
         
         ?>
     <tr id="filas">
-    <td><img src="<?php echo constant('URL');?>imagenes/<?php echo $platillo->imagen;?>" width="100PX">  </td>
+    <td><img src="<?php echo constant('URL');?>imagenes/<?php if(imagen==null||imagen==" "){echo $default.jpg;} else{ echo $platillo->imagen;}?>" width="100PX">  </td>
         <td><?php echo $platillo->nombre;?></td>
         <td><?php echo $platillo->caracteristicas;?></td>
         <td><?php echo $platillo->precio;?></td>
