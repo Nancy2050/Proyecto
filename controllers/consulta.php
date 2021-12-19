@@ -19,7 +19,9 @@
            
         $id_establecimiento = $param[0];
         $establecimiento = $this->model->getById($id_establecimiento);
-        
+        $consola="ESTAS EN EDITARESTABLECIMIENTOCONSULTA";
+        echo("<script>console.log('PHP: ".$consola."');</script>");
+
         $this->view->establecimiento = $establecimiento;
         $this->view->mensaje = "";
         $this->view->render('modificar_establecimiento');
