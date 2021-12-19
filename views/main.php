@@ -6,7 +6,7 @@
         <!--Evita que al abrir en movil, el usuario haga zooom-->
     <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css" type="text/css">
        <!--TITULO E ICONO EN PESTAÑA DEL NAVEGADOR-->
     <title>PRINCIPAL</title> <link rel="shortcut icon" href="public/IMG/icono.png"> 
     </head>
