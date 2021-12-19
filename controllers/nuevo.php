@@ -81,6 +81,9 @@
         if($this->model->iniciarsesion1($telefono,$contra))
         {
        //  echo "Inicio de sesion exitoso";
+           $consola="ESTAS INICIANDO SESION";
+        echo("<script>console.log('PHP: ".$consola."');</script>");
+
         include_once './views/home_establecimiento.php';
         }else
         {
