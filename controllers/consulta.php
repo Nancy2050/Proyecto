@@ -23,8 +23,8 @@
         echo("<script>console.log('PHP: ".$consola."');</script>");
         echo("<script>console.log('PHP: ".id_establecimiento."');</script>");
 
-    //    $this->view->establecimiento = $establecimiento;
-    //    $this->view->mensaje = "";
+        $this->view->establecimiento = $establecimiento;
+       $this->view->mensaje = "";
         $this->view->render('modificar_establecimiento');
     }
     function actualizarEstablecimiento(){
