@@ -8,7 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate"> 
     <meta http-equiv="Pragma" content="no-cache"> 
     <title>DETALLE OFERTAS</title>
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css" type="text/css">
 
 </head>
 <body id="inicial">
