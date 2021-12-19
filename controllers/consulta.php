@@ -17,10 +17,11 @@
        
        function editarEstablecimiento($param=null){
            
-      //  $id_establecimiento = $param[0];
-      //  $establecimiento = $this->model->getById($id_establecimiento);
+        $id_establecimiento = $param[0];
+       $establecimiento = $this->model->getById($id_establecimiento);
         $consola="ESTAS EN EDITARESTABLECIMIENTOCONSULTA";
         echo("<script>console.log('PHP: ".$consola."');</script>");
+        echo("<script>console.log('PHP: ".id_establecimiento."');</script>");
 
     //    $this->view->establecimiento = $establecimiento;
     //    $this->view->mensaje = "";
