@@ -16,7 +16,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>LOGIN CLIENTE</title>
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css" type="text/css">
 
 </head>
 <body id="inicial" >
