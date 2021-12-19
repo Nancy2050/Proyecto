@@ -81,7 +81,9 @@
         if($this->model->iniciarsesion1($telefono,$contra))
         {
        //  echo "Inicio de sesion exitoso";
-        include_once './views/home_establecimiento.php';
+       // include_once './views/home_establecimiento.php';
+                   $this->view->render('home_establecimiento');
+
         }else
         {
            //ESTE SI FUNCIONA PARA MOSTRAR ERRORES
