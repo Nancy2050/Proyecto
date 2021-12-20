@@ -40,7 +40,7 @@ body {
 h1 {
     font-size: 3em;
     text-align: center;
-    color: #fff;
+    color: black;
     font-weight: 100;
 }
 /*-- main --*/
@@ -100,7 +100,7 @@ h1 {
 	-o-border-top-right-radius: 5px;
 }
 .top-two{
-	background:#0099e5;
+	background:#ff8a37;
 }
 .top-three{
 	background:#792ffd;
@@ -115,7 +115,7 @@ h1 {
 	background:#e0274a;
 } 
 .pricing.pricing-two:before { 
-    background: #0099e5; 
+    background: #ffa82f; 
 }
 .pricing.pricing-three:before { 
     background: #792ffd; 
