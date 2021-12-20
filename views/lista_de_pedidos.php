@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        title>Spa Pricing Table Flat Responsive Widget Template :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Spa Pricing Table template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free Web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -19,6 +18,7 @@
        <!--TITULO E ICONO EN PESTAÑA DEL NAVEGADOR-->
     <title>PRINCIPAL</title> <link rel="shortcut icon" href="public/IMG/icono.png"> 
     </head>
+	
     <body>
         <!--Encabezado-->
     <div class="header-main">
