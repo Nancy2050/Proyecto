@@ -32,14 +32,17 @@
     foreach ($this->platillo as $row){
         $platillo=new Platillo();
         $platillo=$row;
-        
+        //VERIFICAR SI EXISTE IMAGEN PARA MOSTRARLA O ENVIAR UNA POR DEFAULT
         $imagen=$platillo->imagen;
-        if($imagen==null||$imagen==$vacio)
-        {
-            $mostrar='default.jpg';
-        } 
-        else{ 
+        $path = 'imagenes'.'/'.$imagen;//Concatena ruta con nombre imagen segun platillo       
+        if (file_exists($path)) {
             $mostrar=$platillo->imagen;
+            if($imagen==''||$imagen==" "){
+                $mostrar='default.jpg';
+
+            }
+        } else {
+            $mostrar='default.jpg';
         }
         ?>
     <tr id="filas">
