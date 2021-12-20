@@ -108,10 +108,6 @@ $row=$query->fetch(PDO::FETCH_ASSOC);//devuelve columnas de elementos del establ
           </li>
 
     <h4 >            
-   <h4  style=" text-align: left;">Comentarios : <a href="#" id="barra"> Ver mas... </a><br><br><br></h4>
-  
-   <h4 id="x"> <a href="<?php echo constant('URL').'consulta/editarEstablecimiento/'.$row['id_establecimiento']?> " id="barra">  &#x270F Editar</a></h4>
-
     </article>
 
     <script src="<?php echo constant('URL');?>public/css/barra.js"></script>
