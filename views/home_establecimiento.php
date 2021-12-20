@@ -60,7 +60,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);//devuelve columnas de elementos del establ
         <img src="<?php echo constant('URL');?>public/IMG/comida.png" height="30px" width="30px"/>                              
         MENU</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>ofertas_gral/render/" id="barra">
+        <li ><a href="<?php echo constant('URL').'ofertas_gral/render/'.$row['id_establecimiento']?>" id="barra">
         <button class="redondo">
         <img src="<?php echo constant('URL');?>public/IMG/oferta.png" height="30px" width="30px"/>                     
         OFERTAS</button></a></li>
