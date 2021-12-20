@@ -92,11 +92,8 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
                <img  id="loguito" src="<?php echo constant('URL');?>public/IMG/telefono.png" alt="empresa" />
               <span> Telefono : <?php  echo utf8_decode($row['telefono']);?></span>
           </li>
-    <h4 >              
-   <h4 id="x"> 
-     <a href="<?php echo constant('URL').'consulta/editarCliente/'.$row['id_cliente']?> " id="barra">
-     <img  id="loguito" src="<?php echo constant('URL');?>public/IMG/lapiz.png" alt="editar" />
-      Editar</a></h4>
+    <h4 >        
+        
 
     </article>
     <script src="<?php echo constant('URL');?>public/css/barra.js"></script>
