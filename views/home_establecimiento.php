@@ -75,7 +75,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);//devuelve columnas de elementos del establ
         <img src="<?php echo constant('URL');?>public/IMG/mesas.png" height="30px" width="30px"/>                             
         MESAS DISPONIBLES</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>lista_pedidos" id="barra">
+        <li ><a href="<?php echo constant('URL');?>lista_de_pedidos" id="barra">
         <button class="redondo">
         <img src="<?php echo constant('URL');?>public/IMG/carrito.png" height="30px" width="30px"/>                               
         LISTA DE PEDIDOS</button></a></li>
