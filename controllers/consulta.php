@@ -14,8 +14,8 @@
                   
            $this->view->render('home_establecimiento');
        }
-       
-       function editarEstablecimiento($param=null){
+      
+       function editarEstablecimiento($param = null){
            
         $id_establecimiento = $param[0];
        $establecimiento = $this->model->getById($id_establecimiento);
