@@ -28,14 +28,22 @@
 <tbody>
     <?php    
     include_once 'models/platillo.php';
-        $vacio=" ";
+        $vacio=" "; $mostrar="";
     foreach ($this->platillo as $row){
         $platillo=new Platillo();
         $platillo=$row;
         
+        $imagen=$platillo->imagen;
+        if($imagen==null||$imagen==$vacio)
+        {
+            $mostrar='default.jpg';
+        } 
+        else{ 
+            $mostrar=$platillo->imagen;
+        }
         ?>
     <tr id="filas">
-    <td><img src="<?php echo constant('URL');?>imagenes/<?php $imagen=$platillo->imagen; if($imagen==null||$imagen==$vacio){echo $default.jpg;} else{ echo $platillo->imagen;}?>" width="100PX">  </td>
+    <td><img src="<?php echo constant('URL');?>imagenes/<?php echo $mostrar?>" width="100PX">  </td>
         <td><?php echo $platillo->nombre;?></td>
         <td><?php echo $platillo->caracteristicas;?></td>
         <td><?php echo $platillo->precio;?></td>
