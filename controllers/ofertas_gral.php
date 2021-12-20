@@ -10,25 +10,13 @@
            $this->view->oferta=[];
 
        } 
-      function hola(){ 
-         try{
-        $oferta=$this->model->getOfertas();
-        $this->view->oferta=$oferta;           
-        $this->view->render('ofertas_gral');}catch{
-            echo "Hubo un error de conexion";
-        }
-
-    }
-       function render(){
-        //Manda a llamar a la funcion getOfertas que debe estar en el
-        //modelo Ofertas_gralModel
-        //Por cada controlador, si se manda a llamar a model
-        //concatena nombre_controlador+Model 
-        //TODO ESTO SE DEFINE EN  libs>>controller>> loadModel
+        function render($param =null){
+           
         $oferta=$this->model->getOfertas();
         $this->view->oferta=$oferta;           
         $this->view->render('ofertas_gral');
-    }
+       }
+      
     function verOferta($param = null){
         $id_ofertas = $param[0];
         $oferta = $this->model->getByIdOfertas($id_ofertas);
