@@ -48,18 +48,26 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
 </div> <br><br>
 
 <div id="barra-lateral" class="barra-lateral">
-      <ul>
+       <ul>
         <li><a href="<?php echo constant('URL');?>lista_establecimientos" id="barra">
-        <button class="redondo" > ESTABLECIMIENTOS CERCANOS</button></a></li>
+        <button class="redondo" >
+        <img src="<?php echo constant('URL');?>public/IMG/restaurante.png" height="30px" width="30px"/>           
+        ESTABLECIMIENTOS CERCANOS</button></a></li>
 
         <li ><a href="<?php echo constant('URL');?>ofertas_gral" id="barra">
-        <button class="redondo"> OFERTAS CERCANAS</button></a></li>
+        <button class="redondo"> 
+        <img src="<?php echo constant('URL');?>public/IMG/oferta.png" height="30px" width="30px"/>                     
+        OFERTAS CERCANAS</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>redes" id="barra">
-        <button class="redondo" > REDES SOCIALES</button></a></li>
+        <li ><a href="<?php echo constant('URL');?>compartir_cliente/" id="barra">
+        <button class="redondo" > 
+        <img src="<?php echo constant('URL');?>public/IMG/redes.png" height="30px" width="30px"/>                     
+        REDES SOCIALES</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>lista_pedidos" id="barra">
-        <button class="redondo" > LISTA DE PEDIDOS</button></a></li>
+        <li ><a href="<?php echo constant('URL');?>lista_de_pedidos" id="barra">
+        <button class="redondo" >         
+        <img src="<?php echo constant('URL');?>public/IMG/carrito.png" height="30px" width="30px"/> 
+        LISTA DE PEDIDOS</button></a></li>
 
         <li ><a href="<?php echo constant('URL');?>mapa" id="barra">
         <button class="redondo" > MAPA</button></a></li>
