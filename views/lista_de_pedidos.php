@@ -6,9 +6,9 @@
 <meta name="keywords" content="Spa Pricing Table template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free Web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
-   <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/style.css" type="text/css">
+   <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/style.css" type="text/css">
 
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/owl.carousel.css" type="text/css">
 <!-- web font -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
 <link href="//fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
@@ -93,62 +93,10 @@
 		</div>	
 	</div>	
 	<!-- //main -->
-	<!-- pop-up-grid -->
-	 <div id="small-dialog" class="mfp-hide">
-		<div class="pop_up w3-agile">
-			<div class="payment-online-form-left">
-				<form action="#" method="post"> 
-					<h4>Account Info</h4>
-					<ul>
-						<li><input class="text-box-dark" placeholder="Frist Name" type="text" required></li>
-						<li><input class="text-box-dark" placeholder="Last Name" type="text" required></li>
-					</ul>
-					<ul>
-						<li><input class="text-box-dark" placeholder="Email" type="text" required></li>
-						<li><input class="text-box-dark" placeholder="Company Name" type="text" required></li>
-					</ul>
-					<ul>
-						<li><input class="text-box-dark" placeholder="Phone Number" type="text" required></li>
-						<li><input class="text-box-dark" placeholder="Address" type="text" required></li>
-					</ul>	 
-					<div class="clear"> </div>
-					<ul class="payment-type w3-agile">
-						<h4>Payment Method</h4> 
-						<li><span class="col_checkbox">
-							<input type="radio" name="payment-method" id="paypal" value="paypal"> 
-							<a class="visa" href="#"> </a>
-							</span>												
-						</li>
-						<li>
-							<span class="col_checkbox">
-								<input type="radio" name="payment-method" id="card" value="card" checked="">
-								<a class="paypal" href="#"> </a>
-							</span>
-						</li>  
-					</ul>
-					<div class="clear"> </div>
-					<ul>
-						<li><input class="text-box-dark" placeholder="Card Number" type="text" required></li>
-						<li><input class="text-box-dark" placeholder="Name on card" type="text" required></li>
-					</ul>
-					<ul>
-						<li><input class="text-box-light hasDatepicker" placeholder="Expiration Date" type="text" required></li>
-						<li><input class="text-box-dark" placeholder="Security Code" type="text" required></li>
-					</ul> 
-					<ul class="payment-sendbtns">
-						<li><input type="reset" value="Reset"></li>
-						<li><input type="submit" value="Process order"></li>
-					</ul>
-					<div class="clear"> </div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<!-- //pop-up-grid --> 
 	
 	<!-- js -->
-	<script src="js/jquery-1.9.1.min.js"></script> 
-	<script src="js/owl.carousel.js"></script>
+	<script src="<?php echo constant('URL');?>public/js/jquery-1.9.1.min.js"></script> 
+	<script src="<?php echo constant('URL');?>public/js/owl.carousel.js"></script>
 	<script>
 		$(document).ready(function() { 
 			$("#owl-demo").owlCarousel({
@@ -163,7 +111,7 @@
 	</script> 
 	<!-- //js -->
 	<!-- popup js --> 
-	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>  
+	<script src="<?php echo constant('URL');?>public/js/jquery.magnific-popup.js" type="text/javascript"></script>  
 	<script>
 		$(document).ready(function() {
 			$('.popup-with-zoom-anim').magnificPopup({
