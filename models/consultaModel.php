@@ -12,7 +12,7 @@ include_once 'models/platillo.php';
        public function get(){
       
        }
-
+      
        public function getById($id){
         $items=[];
 
