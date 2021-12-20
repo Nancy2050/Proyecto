@@ -10,6 +10,7 @@
     <meta http-equiv="Pragma" content="no-cache"> 
     <title>OFERTAS</title>
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
 
     <div id="header">
     <ul>
