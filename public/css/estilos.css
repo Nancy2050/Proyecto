@@ -265,6 +265,15 @@ width: 100%; }
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.4);
 	box-shadow: 0 1px 3px rgba(0,0,0,.4);
+	
+	
+	/*CLAVE PARA QUE SE ADAPTE A TAMAÑO DE PANTALLA*/
+	position: absolute;
+	transform: translate(-50%, -50%);/*Para que se mueva segun cambia tamaño*/
+	width: 40%;
+	top: 42%;
+	left:50%;
+	width: 300x;
 }
 #loguito{ /*ICONO AL LADO DE DATOS ESTABLECIMIENTO*/
 	width: 4%;
