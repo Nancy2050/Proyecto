@@ -248,16 +248,13 @@ width: 100%; }
 #datos {	
 
 	padding: 10px;
-position:relative;
 	/*POSICION PARA QUE NO SE SOBREPONGA Y RESPETE OTRAS ESTRUCTURAS position:relative;*/
 	color: black;
 	width: 50%;
 	border-radius: 4px;
 	left: 50%;
-	top: -20%;
 	text-align: left;
 	font-weight: bold;
-	transform: translate(-50%, -50%);
 	color: rgb(0, 0, 0);
 	background-color:rgba(184, 182, 171, 0.405);
 	-webkit-border-radius: 8px;
@@ -273,7 +270,6 @@ position:relative;
 	width: 40%;
 	top: 42%;
 	left:50%;
-	width: 300x;
 }
 #loguito{ /*ICONO AL LADO DE DATOS ESTABLECIMIENTO*/
 	width: 4%;
