@@ -6,11 +6,9 @@
 <meta name="keywords" content="Spa Pricing Table template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free Web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/style.css" type="text/css">
+   <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/style.css" type="text/css">
 
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/owl.carousel.css" type="text/css">
-
-
+    <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/owl.carousel.css" type="text/css">
 <!-- web font -->
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
 <link href="//fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
@@ -35,7 +33,7 @@
 
 	<!-- main -->
 	<div class="main">
-		<h1>Spa Pricing Table</h1>
+		<h1>Administracion de pedidos</h1>
 		<div class="main-agileinfo"> 
 			<div id="owl-demo" class="owl-carousel owl-theme"><!-- owl-carousel -->
 				<div class="item">
@@ -147,11 +145,7 @@
 		</div>
 	</div>
 	<!-- //pop-up-grid --> 
-	<!-- copyright -->
-	<div class="copyright">
-		<p>© 2017 Spa Pricing Table . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
-	</div>
-	<!-- //copyright --> 
+	
 	<!-- js -->
 	<script src="js/jquery-1.9.1.min.js"></script> 
 	<script src="js/owl.carousel.js"></script>
