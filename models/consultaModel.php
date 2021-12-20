@@ -1,6 +1,6 @@
 <?php
-include_once 'models/establecimiento.php';
-include_once 'models/platillo.php';
+include_once '../establecimiento.php';
+include_once '../platillo.php';
 
    class ConsultaModel extends Model
    {
