@@ -56,21 +56,31 @@ $row=$query->fetch(PDO::FETCH_ASSOC);//devuelve columnas de elementos del establ
   
       <ul>
         <li ><a href="<?php echo constant('URL').'menu_gral/render/'.$row['id_establecimiento']?>" id="barra">
-        <button class="redondo" >MENU</button></a></li>
+        <button class="redondo" >
+        <img src="<?php echo constant('URL');?>public/IMG/comida.png" height="30px" width="30px"/>                              
+        MENU</button></a></li>
 
         <li ><a href="<?php echo constant('URL');?>ofertas_gral/render/" id="barra">
-        <button class="redondo"> OFERTAS</button></a></li>
+        <button class="redondo">
+        <img src="<?php echo constant('URL');?>public/IMG/oferta.png" height="30px" width="30px"/>                     
+        OFERTAS</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>redes" id="barra">
-        <button class="redondo" > REDES SOCIALES</button></a></li>
+        <li ><a href="<?php echo constant('URL');?>compartir_establecimiento" id="barra">
+        <button class="redondo" >
+        <img src="<?php echo constant('URL');?>public/IMG/redes.png" height="30px" width="30px"/>                               
+        REDES SOCIALES</button></a></li>
 
         <li ><a href="<?php echo constant('URL');?>mesas" id="barra">
-        <button class="redondo"> MESAS DISPONIBLES</button></a></li>
+        <button class="redondo">
+        <img src="<?php echo constant('URL');?>public/IMG/mesas.png" height="30px" width="30px"/>                             
+        MESAS DISPONIBLES</button></a></li>
 
         <li ><a href="<?php echo constant('URL');?>lista_pedidos" id="barra">
-        <button class="redondo">  LISTA DE PEDIDOS</button></a></li>
+        <button class="redondo">
+        <img src="<?php echo constant('URL');?>public/IMG/carrito.png" height="30px" width="30px"/>                               
+        LISTA DE PEDIDOS</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>mapa" id="barra">
+        <li ><a href="<?php echo constant('URL');?>mapa/" id="barra">
         <button class="redondo" > MAPA</button></a></li>
 
         <li ><a href="<?php echo constant('URL');?>cerrar" id="barra">
