@@ -54,7 +54,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
         <img src="<?php echo constant('URL');?>public/IMG/restaurante.png" height="30px" width="30px"/>           
         ESTABLECIMIENTOS CERCANOS</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>ofertas_gral" id="barra">
+        <li ><a href="<?php echo constant('URL');?>ofertas_gral_cliente" id="barra">
         <button class="redondo"> 
         <img src="<?php echo constant('URL');?>public/IMG/oferta.png" height="30px" width="30px"/>                     
         OFERTAS CERCANAS</button></a></li>
