@@ -19,9 +19,9 @@
             <img src="<?php echo constant('URL');?>public/IMG/whatsapp.png"  height="30px" width="30px"/></a></li>
             <li ><img src="<?php echo constant('URL');?>public/IMG/facebook.png"  height="30px" width="30px"/></li>
             <li ><img src="<?php echo constant('URL');?>public/IMG/instagram.png"  height="30px" width="30px"/></li>
-            <li><a href="#inicio">Politicas de privacidad</a></li><li></li>
-            <li><a href="#inicio">Soporte</a></li><li></li>
-            <li><a href="#inicio">Ayuda</a></li>
+             <li><a href="<?php echo constant('URL');?>creditos">Politicas de privacidad</a></li><li></li>
+            <li><a href="<?php echo constant('URL');?>creditos">Soporte</a></li><li></li>
+            <li><a href="<?php echo constant('URL');?>creditos">Creditos</a></li>
 		</ul>
 </div>
 
