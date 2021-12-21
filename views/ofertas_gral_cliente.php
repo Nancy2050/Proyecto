@@ -36,9 +36,9 @@
         ?>
     <tr id="filas">
         <td><?php echo $oferta->nombre;?></td>
-        <td><?php echo $oferta->caracteristicas;?></td>
+        <td><?php echo $oferta->especificacion;?></td>
         
-        <td><?php echo $oferta->precio;?></td>
+        <td><?php echo $oferta->descuento;?></td>
 
         <td><a href="<?php echo constant('URL').'menu_gral_cliente/Carrito/'.$oferta->id_platillos?> ">
         <button id="btn">Agregar</button></td>
