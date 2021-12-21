@@ -70,7 +70,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);//devuelve columnas de elementos del establ
         <img src="<?php echo constant('URL');?>public/IMG/redes.png" height="30px" width="30px"/>                               
         REDES SOCIALES</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>mesas" id="barra">
+        <li ><a href="#" id="barra">
         <button class="redondo">
         <img src="<?php echo constant('URL');?>public/IMG/mesas.png" height="30px" width="30px"/>                             
         MESAS DISPONIBLES</button></a></li>
@@ -80,7 +80,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);//devuelve columnas de elementos del establ
         <img src="<?php echo constant('URL');?>public/IMG/carrito.png" height="30px" width="30px"/>                               
         LISTA DE PEDIDOS</button></a></li>
 
-        <li ><a href="<?php echo constant('URL');?>mapa/" id="barra">
+        <li ><a href="<?php echo constant('URL');?>home_cliente" id="barra">
         <button class="redondo" > MAPA</button></a></li>
 
         <li ><a href="<?php echo constant('URL');?>cerrar" id="barra">
