@@ -51,7 +51,7 @@
         <td><?php echo $platillo->caracteristicas;?></td>
         <td><?php echo $platillo->precio;?></td>
 
-        <td><a href="<?php echo constant('URL').'menu_gral_cliente/Carrito/'.$platillo->id_platillos?> ">
+        <td>
         <button id="btn">Agregar</button></td>
         
         <?php }?>
