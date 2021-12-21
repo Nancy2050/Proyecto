@@ -82,7 +82,7 @@ $row=$query->fetch(PDO::FETCH_ASSOC);
                <img  id="loguito" src="<?php echo constant('URL');?>public/IMG/telefono.png" alt="empresa" />
               <span> Telefono : <?php  echo utf8_decode($row['telefono']);?></span>
           </li>
-    <h4 >        
+     </ul><br><br><br><br>    
         
 
     </article>
