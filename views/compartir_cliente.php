@@ -28,7 +28,7 @@
 
 <div class="container">
 	  <div class="content">
-	    <a class="btn" href="#open-modal">Comparte en tus redes sociales</a>
+	    <a class="btnCoral" href="#open-modal">Comparte en tus redes sociales</a>
 	  </div>
 	</div>
 	<div id="open-modal" class="modal-window">
