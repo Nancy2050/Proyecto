@@ -54,7 +54,7 @@
 <tfoot>
     <tr id="firstrow">
     <th colspan="6" >
-        <a href="<?php echo constant('URL');?>menu_establecimiento" id="barra">
+        <a href="<?php echo constant('URL');?>menu_Establecimiento" id="barra">
         <button class="redondo" >AÑADIR PLATILLO</button></a>
     </th>
 </tr>
