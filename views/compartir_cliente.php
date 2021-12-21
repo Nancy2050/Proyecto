@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/estilos.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/barra.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/barra.js" type="text/css">       <!--TITULO E ICONO EN PESTAÑA DEL NAVEGADOR-->
+	    <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
+
     <title>HOME ESTABLECIMIENTO</title> <link rel="shortcut icon" href="<?php echo constant('URL');?>public/IMG/icono.png"> 
 
     <div id="header">
