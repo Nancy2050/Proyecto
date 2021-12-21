@@ -10,8 +10,10 @@
     <meta http-equiv="Pragma" content="no-cache"> 
     <title>OFERTAS</title>
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/CSS/estilos.css" type="text/css">
-    <?php require 'views/header.php';?>
-
+     <!-- REGRESA A PAGINA ANTERIOR-->
+      <a href="<?php echo constant('URL');?>home_clientelogin"> 
+     <img src="<?php echo constant('URL');?>public/IMG/flecha2.png" width="50px"/>   </a></li>
+  
 </head>
 <h1>OFERTAS</h1>
 <table width="100" id="tabla_platos" >
