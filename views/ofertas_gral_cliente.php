@@ -40,7 +40,7 @@
         
         <td><?php echo $oferta->descuento;?></td>
 
-        <td><a href="<?php echo constant('URL').'menu_gral_cliente/Carrito/'.$oferta->id_platillos?> ">
+        <td>
         <button id="btn">Agregar</button></td>
         
         <?php }?>
