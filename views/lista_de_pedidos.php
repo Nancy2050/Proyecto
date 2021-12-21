@@ -3,16 +3,10 @@
     <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Spa Pricing Table template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free Web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
    <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/style.css" type="text/css">
-
     <link rel="stylesheet" href="<?php echo constant('URL');?>public/css/owl.carousel.css" type="text/css">
-<!-- web font -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
-<link href="//fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
-
        <!--TITULO E ICONO EN PESTAÑA DEL NAVEGADOR-->
     <title>PRINCIPAL</title> <link rel="shortcut icon" href="public/IMG/icono.png"> 
     </head>
@@ -30,16 +24,43 @@
 </ul>
     </div>
 </div>
+	    
+<div id="header">
+    <ul>
+      <li> <br><br>
+   <!-- REGRESA A PAGINA ANTERIOR-->
+    <a href="<?php echo constant('URL');?>home_establecimiento"> 
+     <img src="<?php echo constant('URL');?>public/IMG/flecha2.png" width="50px"/>   </a></li>
+  
+    </ul>
+   </div>  
 
 	<!-- main -->
 	<div class="main">
-		<h1>Administracion de pedidos</h1>
+		<h1 id="food">ADMINISTRACIÓN DE PEDIDOS</h1>
 		<div class="main-agileinfo"> 
 			<div id="owl-demo" class="owl-carousel owl-theme"><!-- owl-carousel -->
 				<div class="item">
 					<div class="pricing pricing-two">
 						<div class="pricing-top top-two">
-							<h3>PEDIDOS PENDIENTES</h3>
+							<h3 id="pedidos">PEDIDOS PENDIENTES</h3>
+							<p>Actualizado al 20/12/2021</p><br>
+						</div>
+						<div class="pricing-bottom"> 
+							<p>Sin registros aun</p> 
+							<p></p> 
+							<p></p> 
+							<p></p> 
+							<p class="w3agile">-</p> 
+							<div class="agileits-buy">
+								<a class="popup-with-zoom-anim" href="#small-dialog">Administrar</a>
+							</div>
+						</div>
+					</div> 
+				</div> <div class="item">
+					<div class="pricing pricing-two">
+						<div class="pricing-top top-two">
+							<h3 id="pedidos">PEDIDOS EN PROGRESO</h3><br>
 							<p>Actualizado al 20/12/2021</p>
 						</div>
 						<div class="pricing-bottom"> 
@@ -56,24 +77,7 @@
 				</div> <div class="item">
 					<div class="pricing pricing-two">
 						<div class="pricing-top top-two">
-							<h3>PEDIDOS EN PROGRESO</h3>
-							<p>Actualizado al 20/12/2021</p>
-						</div>
-						<div class="pricing-bottom"> 
-							<p>Sin registros aun</p> 
-							<p></p> 
-							<p></p> 
-							<p></p> 
-							<p class="w3agile">-</p> 
-							<div class="agileits-buy">
-								<a class="popup-with-zoom-anim" href="#small-dialog">Administrar</a>
-							</div>
-						</div>
-					</div> 
-				</div> <div class="item">
-					<div class="pricing pricing-two">
-						<div class="pricing-top top-two">
-							<h3>PEDIDOS FINALIZADOS</h3>
+							<h3 id="pedidos">PEDIDOS FINALIZADOS</h3><br>
 							<p>Actualizado al 20/12/2021</p>
 						</div>
 						<div class="pricing-bottom"> 
